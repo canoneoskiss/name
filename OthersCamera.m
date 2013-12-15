@@ -25,7 +25,6 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-	//NSLog(@"--- カメラ撮影終了処理 ---");
 	
 	[session stopRunning];
 	
@@ -42,6 +41,8 @@
 	inputFront = nil;
 	inputBack = nil;
 	session = nil;
+    captureImage = nil;
+    imagePreview=nil;
 	
 }
 
@@ -277,6 +278,11 @@
     AVCaptureVideoDataOutput* output = [session.outputs objectAtIndex:0];
     [session removeOutput:output];
     [session stopRunning];
+    captureImage = nil;
+    imagePreview=nil;
+    
+
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
