@@ -1,4 +1,5 @@
 
+
 #import "OthersViewController.h"
 #import "OthersCell.h"
 
@@ -18,6 +19,7 @@
     return self;
 }
 
+//このコードはダイレクトリーotherを作成しています
 
 - (void)viewDidLoad
 {
